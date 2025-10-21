@@ -1,0 +1,58 @@
+$ *********************************************************
+$ **                                                     **
+$ **           Test INP Example Highlights               **
+$ **                                                     **
+$ *********************************************************
+
+$ Any Line starting with '$' is a comment
+
+$ Typical DOE-2 Block
+"Uname" = COMMAND
+   KEYWORD           = VALUE
+   ..
+
+$ Example SPACE and EXTERIOR-WALL definitions
+"Storage" = SPACE
+   X                = 217.388
+   Y                = 31.2336
+   Z                = 0
+   AZIMUTH          = 0
+   VOLUME           = 3590.42
+   SHAPE            = POLYGON
+   ZONE-TYPE        = UNCONDITIONED 
+   POLYGON          = "Storage Plg"
+   ..
+   
+"Rmfb90c613f 4342..Fc00" = EXTERIOR-WALL
+   CONSTRUCTION     = "Generic Exposed Floor"
+   X                = 0
+   Y                = 30.6759
+   Z                = 0
+   AZIMUTH          = 180
+   TILT             = 180
+   LOCATION         = BOTTOM 
+   POLYGON          = "Rmfb90c613f 4342..Fc00 Plg"
+   ..
+"Suite" = SPACE
+   X                = 30.6694
+   Y                = 256.923
+   Z                = 0
+   AZIMUTH          = 0
+   VOLUME           = 9345.19
+   SHAPE            = POLYGON
+   LIGHTING-W/AREA   = 0.38
+   ZONE-TYPE        = CONDITIONED 
+   POLYGON          = "Suite Plg"
+   ..
+
+$ Other Keyword Highlights
+LIST
+ECONOMICS-REPORT
+PLANT-REPORT
+SYSTEMS-REPORT
+LOADS-REPORT
+
+PARAMETER test = 123.45
+SET-DEFAULT FOR SYSTEM "HVAC-1"
+FOR ZONE "Zone1"
+FOR PUMP "Pump1"

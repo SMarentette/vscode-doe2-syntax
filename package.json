@@ -1,0 +1,35 @@
+{
+  "name": "bdl-syntax",
+  "displayName": "DOE-2 syntax highlighting",
+  "description": "Syntax highlighting for DOE-2 / eQUEST .inp ",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "bdl",
+        "aliases": [
+          "BDL",
+          "DOE-2 BDL"
+        ],
+        "extensions": [
+          ".inp"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "bdl",
+        "scopeName": "source.bdl",
+        "path": "./syntaxes/bdl.tmLanguage.json"
+      }
+    ]
+  }
+}

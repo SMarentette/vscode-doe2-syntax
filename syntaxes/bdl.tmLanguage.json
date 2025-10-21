@@ -1,0 +1,47 @@
+{
+  "name": "BDL (DOE-2)",
+  "scopeName": "source.bdl",
+  "patterns": [
+    {
+      "name": "comment.line.dollar",
+      "match": "^\\s*\\$.*$"
+    },
+    {
+      "name": "string.quoted.double",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "keyword.other.attribute",
+      "match": "^\\s+[A-Z][A-Z0-9_\\/-]*(?=\\s*=)"
+    },
+    {
+      "name": "constant.numeric",
+      "match": "\\b0[xX][0-9a-fA-F]+|(?:\\b\\d+(?:\\.\\d+)?|\\.\\d+)(?:[eE][+-]?\\d+)?"
+    },
+    {
+      "name": "keyword.other.endstatement",
+      "match": "\\.\\."
+    },
+    {
+      "name": "comment.line.banner",
+      "match": "^\\s*\\$\\s*-{57,}.*$|^\\s*\\$\\s*\\*{57,}.*$|^\\s*\\$\\s*\\*\\*\\s*$|^\\s*\\$\\s*$|^\\s*\\*\\*\\s*$"
+    },
+    {
+      "name": "support.function.report",
+      "match": "\\b(?:ECONOMICS-REPORT|PLANT-REPORT|SYSTEMS-REPORT|LOADS-REPORT|CONDITIONED|UNCONDITIONED|TOP|BOTTOM|RUN|LIST)\\b"
+    },
+    {
+      "name": "keyword.control.object",
+      "match": "(?:=\\s*(?:RUN-PERIOD-PD|SITE-PARAMETERS|MASTER-METERS|FUEL-METER|ELEC-METER|STEAM-METER|CHW-METER|FIXED-SHADE|GLASS-TYPE|MATERIAL|LAYERS|CONSTRUCTION|HOLIDAYS|DAY-SCHEDULE-PD|WEEK-SCHEDULE-PD|SCHEDULE-PD|PUMP|CIRCULATION-LOOP|BOILER|CHILLER|DW-HEATER|HEAT-REJECTION|FLOOR|SYSTEM|ZONE|SPACE|POLYGON|EXTERIOR-WALL|INTERIOR-WALL|UNDERGROUND-WALL|WINDOW|DOOR|LOAD-MANAGEMENT|EQUIP-CTRL|DESIGN-DAY|CONDENSING-UNIT|COMMAND|CURVE-FIT|HOURLY-REPORT))\\b|\\b(?:PARAMETER)\\b|\\b(?:SET-DEFAULT|FOR)\\s+(?:SPACE|PUMP|SYSTEM|ZONE)\\b|\\bSET-DEFAULT\\b"
+    }
+  ],
+  "fileTypes": ["inp"],
+  "uuid": "6f7de3f8-0b34-4b22-8f5a-8b7b4a0f6bd3"
+}
