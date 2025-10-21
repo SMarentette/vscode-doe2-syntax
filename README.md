@@ -1,4 +1,4 @@
-# BDL (DOE‑2) syntax highlighting for `.inp`
+# DOE-2 Syntax Highlighting for `.inp` Files
 
 This is a VS code highlighting extension for DOE‑2 / eQUEST inp files
 
