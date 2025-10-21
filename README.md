@@ -6,6 +6,7 @@ This is a VS code highlighting extension for DOE‑2 / eQUEST inp files
 
 Once installed verify it is working by opening the 'test-sample.inp' file and it should look like:
 
+![alt text](doe_syntax.png)
 
 ## Use it
 1. Install the packaged `.vsix` or open this folder and run an Extension Development Host.
